@@ -1,58 +1,56 @@
-import React from "react"
-import JobBoardComponent from "./components/JobBoardComponent"
-import data from "./API/data.json"
-import { useEffect, useState } from "react"
-
-import { Fragment } from "react"
-import { Disclosure, Menu, Transition } from "@headlessui/react"
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
+import React from "react";
+import JobBoardComponent from "./components/JobBoardComponent";
+import data from "./API/data.json";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [jobs, setJobs] = useState([])
-  const [filters, setFilters] = useState([])
+  const [jobs, setJobs] = useState([]);
+  const [filters, setFilters] = useState([]);
 
-  useEffect(() => setJobs(data), [])
+  useEffect(() => setJobs(data), []);
 
   // the code below creates the tag filters.
   const filterFunc = ({ role, level, tools, languages }) => {
     if (filters.length === 0) {
-      return true
+      return true;
     }
 
-    const tags = [role, level]
+    const tags = [role, level];
 
     if (tools) {
-      tags.push(...tools)
+      tags.push(...tools);
     }
     if (languages) {
-      tags.push(...languages)
+      tags.push(...languages);
     }
 
-    return filters.every((filter) => tags.includes(filter))
-  }
+    return filters.every((filter) => tags.includes(filter));
+  };
 
   const handleTagClick = (tag) => {
     // to avoid re-adding the tag.
-    if (filters.includes(tag)) return
-    setFilters([...filters, tag])
-  }
+    if (filters.includes(tag)) return;
+    setFilters([...filters, tag]);
+  };
 
   const handleFilterClick = (passedFilter) => {
-    setFilters(filters.filter((f) => f !== passedFilter))
-  }
+    setFilters(filters.filter((f) => f !== passedFilter));
+  };
 
-  const filteredJobs = jobs.filter(filterFunc)
+  const filteredJobs = jobs.filter(filterFunc);
 
   const clearFilters = () => {
-    setFilters([])
-  }
+    setFilters([]);
+  };
 
   return (
     <div>
       <header className="bg-teal-600 mb-12">
-        {/* Header background image */}
-
-        {/* end navigation */}
+        <img
+          className="w-full"
+          src="/images/bg-header-desktop.svg"
+          alt="background"
+        />
       </header>
       <div className="container m-auto">
         {filters.length > 0 && (
@@ -96,10 +94,10 @@ function App() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 
 // TODOS
 // 1. Study the design & API (Json) ✅
