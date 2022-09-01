@@ -3,8 +3,6 @@ import JobBoardComponent from "./components/JobBoardComponent"
 import data from "./API/data.json"
 import { useEffect, useState } from "react"
 
-import Nav from "./Nav"
-import NavBar from "./NavBar"
 import NaviBar from "./NaviBar"
 
 function App() {
