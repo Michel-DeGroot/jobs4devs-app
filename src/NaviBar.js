@@ -7,7 +7,7 @@ import {
   IconButton,
 } from "@material-tailwind/react"
 
-import Logo from "./assets/Jobs4devs_logo.png"
+import Logo from "./assets/jobs4devs-logo.png"
 
 import BG from "./assets/bg-header-desktop.svg"
 import BGM from "./assets/bg-header-mobile.svg"
@@ -23,13 +23,13 @@ export default function NaviBar() {
   }, [])
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <div className="p-1 font-bold uppercase text-teal-900 hover:text-teal-300">
+    <ul className="items-center mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <div className="p-1 font-bold uppercase text-black hover:text-cyan-50">
         <a href="#" className="flex items-center">
           Home
         </a>
       </div>
-      <div className="p-1 font-bold uppercase text-teal-900 hover:text-teal-300">
+      <div className="p-1 font-bold uppercase text-black hover:text-cyan-50">
         <a
           href="http://dev.micheldegroot.com/index.html"
           className="flex items-center"
@@ -38,7 +38,7 @@ export default function NaviBar() {
         </a>
       </div>
 
-      <div className="p-1 font-bold uppercase text-teal-900 hover:text-teal-300">
+      <div className="p-1 font-bold uppercase text-black hover:text-cyan-50">
         <a
           href="http://dev.micheldegroot.com/contact.html"
           className="flex items-center"

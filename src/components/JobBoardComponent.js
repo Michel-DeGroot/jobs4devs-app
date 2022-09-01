@@ -29,7 +29,7 @@ const JobBoardComponent = ({
   return (
     <div
       className={`flex flex-col bg-white shadow-lg my-16 mx-10 p-6 rounded ${
-        featured && `border-l-4 border-teal-600`
+        featured && `border-l-4 border-cyan-600`
       } lg:my-6 lg:flex-row xl:w-3/4 xl:mx-auto`}
     >
       <div>
@@ -40,15 +40,15 @@ const JobBoardComponent = ({
         />
       </div>
       <div className="flex flex-col justify-between ml-4">
-        <h3 className="font-bold text-teal-600">
+        <h3 className="font-bold text-cyan-600">
           {company}
           {isNew && (
-            <span className="text-white text-xs bg-teal-600 font-bold py-1 px-2 m-2 rounded-full">
+            <span className="text-white text-xs bg-cyan-600 font-bold py-1 px-2 m-2 rounded-full">
               NEW!
             </span>
           )}
           {featured && (
-            <span className="text-white text-xs bg-teal-900 font-bold py-1 px-2 m-2 rounded-full">
+            <span className="text-white text-xs bg-cyan-900 font-bold py-1 px-2 m-2 rounded-full">
               FEATURED
             </span>
           )}
@@ -58,12 +58,12 @@ const JobBoardComponent = ({
           {postedAt} • {contract} • {location}
         </p>
       </div>
-      <div className="flex flex-wrap items-center mt-4 mx-4 pt-4 border-t border-solid border-teal-400 lg:ml-auto lg:border-none lg:pt-0 lg:mt-0">
+      <div className="flex flex-wrap items-center mt-4 mx-4 pt-4 border-t border-solid border-cyan-400 lg:ml-auto lg:border-none lg:pt-0 lg:mt-0">
         {tags
           ? tags.map((tag) => (
               <span
                 onClick={() => handleTagClick(tag)}
-                className="cursor-pointer text-teal-600 bg-teal-50 font-bold p-2 mr-4 mb-4 rounded-xl lg:mb-0"
+                className="cursor-pointer text-cyan-600 bg-cyan-50 font-bold p-2 mr-4 mb-4 rounded-xl lg:mb-0"
               >
                 {tag}
               </span>

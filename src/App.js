@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div>
-      <header className="bg-teal-600 mb-12">
+      <header className="bg-cyan-600 mb-12">
         {/* start NavBar section */}
         <span className="bg-transparent z-10 mt-40 xl:z-10 xl:-mt-40">
           <NaviBar />
@@ -64,15 +64,15 @@ function App() {
           <div className="flex flex-wrap bg-white shadow-lg my-16 mx-10 p-6 rounded -mt-5 lg:-mt-20 z-10 relative xl:w-3/4 xl:mx-auto">
             {filters.map((filter) => (
               <span
-                className="cursor-pointer bg-teal-100 mr-4 mb-4 p-1 pl-2 pr-0  font-bold space-x-4"
+                className="cursor-pointer bg-cyan-100 mr-4 mb-4 p-1 pl-2 pr-0  font-bold space-x-4"
                 onClick={() => handleFilterClick(filter)}
               >
-                <span text-teal-600 bg-teal-200>
+                <span text-cyan-600 bg-cyan-200>
                   {filter}
                 </span>
 
                 <span
-                  className=" text-xl bg-teal-600 text-white px-2 py-1 "
+                  className=" text-xl bg-cyan-600 text-white px-2 py-1 "
                   border
                 >
                   ✕
