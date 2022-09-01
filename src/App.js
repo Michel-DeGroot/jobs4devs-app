@@ -3,9 +3,9 @@ import JobBoardComponent from "./components/JobBoardComponent"
 import data from "./API/data.json"
 import { useEffect, useState } from "react"
 
-import { Fragment } from "react"
-import { Disclosure, Menu, Transition } from "@headlessui/react"
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
+import Nav from "./Nav"
+import NavBar from "./NavBar"
+import NaviBar from "./NaviBar"
 
 function App() {
   const [jobs, setJobs] = useState([])
@@ -50,13 +50,20 @@ function App() {
   return (
     <div>
       <header className="bg-teal-600 mb-12">
-        {/* Header background image */}
-
-        {/* end navigation */}
+        {/* start NavBar section */}
+        <span className="bg-transparent z-10 mt-40 xl:z-10 xl:-mt-40">
+          <NaviBar />
+        </span>
+        {/* End NavBar section */}
+        {/* <img
+          className="w-full mb-40 z-0 xl:z-0"
+          src="/images/bg-header-desktop.svg"
+          alt="background"
+        /> */}
       </header>
       <div className="container m-auto">
         {filters.length > 0 && (
-          <div className="flex flex-wrap bg-white shadow-lg my-16 mx-10 p-6 rounded -mt-20 z-10 relative xl:w-3/4 xl:mx-auto">
+          <div className="flex flex-wrap bg-white shadow-lg my-16 mx-10 p-6 rounded -mt-5 lg:-mt-20 z-10 relative xl:w-3/4 xl:mx-auto">
             {filters.map((filter) => (
               <span
                 className="cursor-pointer bg-teal-100 mr-4 mb-4 p-1 pl-2 pr-0  font-bold space-x-4"

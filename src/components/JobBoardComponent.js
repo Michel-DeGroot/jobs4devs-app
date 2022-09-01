@@ -1,20 +1,4 @@
-import React from "react";
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+import React from "react"
 
 const JobBoardComponent = ({
   job: {
@@ -33,13 +17,13 @@ const JobBoardComponent = ({
   },
   handleTagClick,
 }) => {
-  const tags = [role, level];
+  const tags = [role, level]
 
   if (tools) {
-    tags.push(...tools);
+    tags.push(...tools)
   }
   if (languages) {
-    tags.push(...languages);
+    tags.push(...languages)
   }
 
   return (
@@ -87,6 +71,6 @@ const JobBoardComponent = ({
           : ""}
       </div>
     </div>
-  );
-};
-export default JobBoardComponent;
+  )
+}
+export default JobBoardComponent
